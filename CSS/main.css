@@ -2,25 +2,50 @@
 
 
 :root {
-    --clr-btn-bg: #DC3545;
-    --clr-txt-900: #000;
-    --clr-txt-400: #717275;
-    --clr-txt-
-    --clr-txt-light: #fff;
 
+  --clr-primary: #dc3848;
+  --clr-primary-dark: #bb2d3b;
+  --clr-secondary: #ffc105;
 
+  --clr-rare: #0dccf2;
+  --clr-dark: #000000;
+  --clr-white: #ffffff;
 
-    
-    --fs-200: 0.875rem;         /* 14px */
-    --fs-300: 1rem;             /* 16px */
-    --fs-400: 1.125rem;         /* 18px */
-    --fs-500: 1.375rem;         /* 22px */
-    --fs-600: 1.625rem;         /* 26px */
-    --fs-700: 1.75rem;          /* 28px */
-    --fs-800: 3.5rem;           /* 56px */
-    --fs-900: 4.75rem;          /* 76px */
+  --clr-txt-400: #ababab;
+  --clr-txt-500: #717275;
 
-    --ff-primary: 'Montserrat', sans-serif;
+  /* 14px */
+  --fs-200: 0.875rem;
+  /* 16px */
+  --fs-300: 1rem;
+  /* 18px */
+  --fs-400: 1.125rem;
+  /* 22px */
+  --fs-500: 1.375rem;
+  /* 26px */
+  --fs-600: 1.625rem;
+  /* 28px */
+  --fs-700: 1.75rem;
+  /* 56px */
+  --fs-800: 3.5rem;
+  /* 76px */
+  --fs-900: 4.75rem;
+
+  --ff-primary: 'Montserrat', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
 }
 
 /* *************************** css rest********************************* */
@@ -33,9 +58,9 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -79,9 +104,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -94,5 +119,168 @@ select {
 
 /* ********************** General ********************** */
 
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-300);
+  color: var(--clr-txt-500);
+  background-color: var(--clr-white);
+}
+
+a {
+  font-size: var(--fs-400);
+  color: var(--clr-txt-500);
+  text-decoration: none;
+}
+
+a:hover,a:focus-visible, a:active {
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+::-moz-selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* ********************** Header ********************** */
+.navbar-section {
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-500) 0;
+  border-bottom: var(--clr-txt-400);
+}
+
+.header-logo a {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark);
+}
+
+.nav-links {
+  display: flex;
+  order: -1;
+  font-size: var(--fs-400);
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-semi-bold);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation[data-visible] {
+  display: block;
+}
 
 
+@media (max-width: 991px) {
+
+  .navbar-section {
+    padding: var(--size-400) 0;
+    justify-content: space-between;
+  }
+  
+  .primary-navigation {
+    display: none;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--clr-white);
+    padding-left: var(--size-600);
+    border-radius: var(--size-200);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: var(--size-400);
+  }
+
+  .header-logo a {
+    order: 1;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    order: -1;
+    cursor: pointer;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+
+} 
+
+@media (max-width: 767px) {
+  .navbar-section {
+    justify-content: space-between; ;
+  }
+
+  .btn-Reservation {
+    display: none;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************** Utility class ********************** */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+
+.container {
+  --max-witdh: 1140px;
+  --container-padding: 1rem;
+  width: min(var(--max-witdh), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+.btn-primary {
+  font-size: --var(fs-400);
+  display: inline-block;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding: var(--size-300) var(--size-600);
+  border: none;
+  border-radius: var(--size-100);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-primary-dark);
+  cursor: pointer;
+}
