@@ -212,11 +212,12 @@ ul {
 
   .primary-navigation {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 4rem;
     left: 0;
     width: 100%;
-    background: var(--clr-primary);
+    padding-block: var(--size-600);
+    background: var(--clr-white);
     padding-left: var(--size-600);
     border-radius: var(--size-200);
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
@@ -297,6 +298,7 @@ ul {
 }
 
 .hero-section-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -308,7 +310,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  z-index: 9999;
+  z-index: 99;
   color: var(--clr-white);
   text-align: start;
 }
@@ -609,7 +611,6 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
 }
 
 .footer-section::before {
@@ -623,20 +624,89 @@ ul {
 }
 
 .footer-section-container {
-  z-index: 9999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo a {
   font-size: var(--fs-600);
   font-weight: var(--fw-bold);
-  color: var(--clr-white);
+  color: var(--clr-white)
 }
 
+.footer-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: start;
+  padding-block: var(--size-900);
+}
 
+.footer-section-content div {
+  max-width: 32%;
+  gap: var(--size-500);
+}
 
+.footer-section-content h6 {
+  color: var(--clr-white);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  margin-bottom: var(--size-600); 
+}
 
+.footer-section-content p {
+  padding-block: var(--size-100);
+  color: var(--clr-txt-400);
+  font-size: var(--fs-400);
+}
 
+.footer-content-location {
+  text-align: start;
+  margin-bottom: var(--size-200);
+}
 
+.footer-content-location .direction {
+  margin-top: var(--size-300);
+  display: inline-block;
+  color: var(--clr-txt-400);
+  background-color: #1c1f23;
+  padding: var(--size-200) var(--size-600);
+  border-radius: var(--size-100);
+}
+
+.footer-content-timing {
+  text-align: start;
+}
+
+.footer-content-social-links ul {
+  display: flex;
+  gap: var(--size-400);
+  margin-bottom: var(--size-800);
+}
+
+.footer-content-social-links ul li a {
+  font-size: var(--fs-500);
+}
+
+@media (max-width: 991px) {
+  .footer-section-content div {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-section-content {
+    flex-direction: column;
+    gap: var(--size-900);
+    align-items: flex-start;
+  }
+
+  .footer-section-content div {
+    max-width: 100%;
+  }
+}
 
 /* ********************** Utility class ********************** */
 
