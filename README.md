@@ -4,6 +4,7 @@ This repository contains the code for the Crispy Kitchen website. Crispy Kitchen
 
 ## Live Demo
 
+https://kashifkhn.github.io/Crispy_Kitchen_shop_website/
 
 ## Table of Contents
 
@@ -28,7 +29,7 @@ Crispy Kitchen is a modern and elegant restaurant website. It showcases the rest
 
 ## Getting Started
 
-To get started, simply clone this repository to your local machine:
+To get started, simply clone this repository to your local machine:\n
 https://github.com/KashifKhn/Crispy_Kitchen_shop_website.git
 
 ## Usage
