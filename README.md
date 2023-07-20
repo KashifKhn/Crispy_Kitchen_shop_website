@@ -3,6 +3,7 @@
 This repository contains the code for the Crispy Kitchen website. Crispy Kitchen is a fictional restaurant that offers delicious steaks, special menus, and news & events updates. The website is built using HTML, CSS, and JavaScript.
 
 ## Live Demo
+
 https://kashifkhn.github.io/Crispy_Kitchen_shop_website/
 
 ## Table of Contents
