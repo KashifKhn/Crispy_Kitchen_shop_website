@@ -29,7 +29,7 @@ Crispy Kitchen is a modern and elegant restaurant website. It showcases the rest
 
 ## Getting Started
 
-To get started, simply clone this repository to your local machine:\n
+To get started, simply clone this repository to your local machine:
 https://github.com/KashifKhn/Crispy_Kitchen_shop_website.git
 
 ## Usage
