@@ -233,7 +233,7 @@ ul {
 /* ********************** Break Fast menu section ********************** */
 
 .special-menu-section {
-    margin-block: var(--size-900);
+    margin-block: var(--size-800);
     padding-block: var(--size-900);
     margin-inline: auto;
 }
@@ -267,6 +267,10 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
+.custom-width-card {
+    width: 49%;
+}
+
 .special-menu-card-img {
     width: 100%;
     position: relative;
@@ -276,18 +280,6 @@ ul {
 .special-menu-card-img img {
     min-width: 100%;
     object-fit: cover;
-}
-
-.special-menu-card-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: var(--fs-200);
-    color: var(--clr-white);
-    background: var(--clr-secondary);
-    margin: var(--size-300);
-    padding: var(--size-100) var(--size-400);
-    border-radius: var(--size-100);
 }
 
 .menu-info {
@@ -385,10 +377,6 @@ ul {
 .reviews-star {
     font-size: var(--fs-300);
     color: var(--clr-secondary);
-}
-
-.width-50 {
-    width: 49%;
 }
 
 
