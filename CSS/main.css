@@ -168,7 +168,7 @@ ul {
 
 /* ********************** Header ********************** */
 .navbar-section {
-  margin-bottom: var(--size-900);
+  margin-bottom: var(--size-200);
 }
 
 .navbar-section-container {
@@ -414,17 +414,12 @@ ul {
 .hover-link:hover,
 .hover-link:focus,
 .hover-link:active {
-  color: var(--clr-primary-dark);
-  cursor: pointer;
-}
-
-.hover-link:active {
-  color: var(--clr-primary-dark);
+  color: var(--clr-primary);
   cursor: pointer;
 }
 
 a:is(:link, :active, :visited).active {
-  color: var(--clr-primary-dark);
+  color: var(--clr-primary);
 }
 
 .reviews {

@@ -171,12 +171,12 @@ ul {
 .hero-section {
   position: relative;
   height: 100vh;
-  margin-bottom: var(--size-600);
+  margin-bottom: var(--size-900);
 }
 
 .bg-video-wraper {
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
