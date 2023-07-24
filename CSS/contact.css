@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+    --clr-primary: #dc3848;
+    --clr-primary-dark: #bb2d3b;
+    --clr-secondary: #ffc105;
+
+    --clr-rare: #0dccf2;
+    --clr-dark: #000000;
+    --clr-white: #ffffff;
+
+    --clr-txt-400: #ababab;
+    --clr-txt-500: #717275;
+
+    --fs-100: 0.575rem;
+    /* 14px */
+    --fs-200: 0.875rem;
+    /* 16px */
+    --fs-300: 1rem;
+    /* 18px */
+    --fs-400: 1.125rem;
+    /* 22px */
+    --fs-500: 1.375rem;
+    /* 26px */
+    --fs-600: 1.625rem;
+    /* 28px */
+    --fs-700: 1.75rem;
+    /* 56px */
+    --fs-800: 3.5rem;
+    /* 76px */
+    --fs-900: 4.75rem;
+
+    --ff-primary: 'Montserrat', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 700;
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+}
+
+/* *************************** css rest********************************* */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ********************** General styling ********************** */
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-300);
+    color: var(--clr-txt-500);
+    background-color: var(--clr-white);
+}
+
+a {
+    font-size: var(--fs-400);
+    color: var(--clr-txt-500);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+}
+
+h2 {
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+}
+
+h3 {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+::-moz-selection {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+
+/* ********************** Hero styling ********************** */
+.hero-section {
+    position: relative;
+    background-image: url(../Images/Contact/contact-header.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: var(--size-900);
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--clr-dark), transparent 100%);
+}
+
+.hero-section-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--size-900);
+}
+
+.hero-section-container h1 {
+    color: var(--clr-white);
+    margin-bottom: var(--size-400);
+}
+
+.hero-section-container p {
+    color: var(--clr-white);
+    margin-bottom: var(--size-400);
+}
+
+@media (max-width: 991px) {
+    .hero-section-container h1 {
+        font-size: var(--fs-800);
+    }
+
+    .hero-section-container p {
+        font-size: var(--fs-400);
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section-container h1 {
+        font-size: var(--fs-700);
+    }
+
+    .hero-section-container p {
+        font-size: var(--fs-300);
+    }
+}
+
+/* ********************** Form section ********************** */
+.form-section {
+    padding-block: var(--size-900);
+    margin-block: var(--size-900);
+}
+
+.form-section-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.left {
+    width: 60%;
+}
+
+.left h2 {
+    margin-bottom: var(--size-400);
+}
+
+.left div {
+    min-width: 70%;
+}
+
+.left form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.left form input,
+.left form textarea {
+    width: 100%;
+    padding: var(--size-300);
+    margin-bottom: var(--size-400);
+    border: 1px solid var(--clr-txt-400);
+    border-radius: var(--size-100);
+    font-size: var(--fs-400);
+    color: var(--clr-txt-500);
+}
+
+
+.right {
+    margin-top: var(--size-900);
+    padding-top: var(--size-900);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    gap: var(--size-400);
+}
+
+.right h4 {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-dark);
+    margin-bottom: var(--size-100);
+}
+
+.right table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.right table tr td {
+    padding-block: var(--size-100);
+    padding-inline: var(--size-200);
+    font-size: var(--fs-400);
+    color: var(--clr-txt-500);
+}
+
+.right table tr td:first-child {
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-dark);
+}
+
+/* **********************  map section ********************** */
+
+.map-section {
+    padding-block: var(--size-900);
+    margin-block: var(--size-900);
+}
+
+.map-section-container h4 {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-dark);
+    margin-bottom: var(--size-300);
+}
+
+
+
+/* ********************** Utility class ********************** */
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+.container {
+    --max-witdh: 1140px;
+    --container-padding: 1rem;
+    width: min(var(--max-witdh), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+}
+
+.btn-primary {
+    font-size: --var(fs-400);
+    display: inline-block;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: var(--size-300) var(--size-600);
+    border: none;
+    border-radius: var(--size-100);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary-dark);
+    cursor: pointer;
+}
+
+.hover-link:hover,
+.hover-link:focus,
+.hover-link:active {
+    color: var(--clr-primary-dark);
+    cursor: pointer;
+}
+
+
+.text-semibold {
+    font-weight: var(--fw-semi-bold);
+}
+
+.text-bold {
+    font-weight: var(--fw-bold);
+}
+
+.text-big {
+    font-size: var(--fs-700);
+    color: var(--clr-dark);
+}
+
+.text-normal {
+    font-size: var(--fs-400);
+    color: var(--clr-dark);
+}
