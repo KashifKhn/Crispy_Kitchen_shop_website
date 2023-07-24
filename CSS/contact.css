@@ -250,7 +250,7 @@ ul {
 }
 
 .left div {
-    min-width: 70%;
+    width: 70%;
 }
 
 .left form {
@@ -271,6 +271,9 @@ ul {
     font-size: var(--fs-400);
     color: var(--clr-txt-500);
 }
+
+
+
 
 
 .right {
@@ -307,6 +310,46 @@ ul {
 .right table tr td:first-child {
     font-weight: var(--fw-semi-bold);
     color: var(--clr-dark);
+}
+
+
+@media (max-width: 991px) {
+    .form-section-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .left h2 {
+        font-size: var(--fs-800);
+        margin-bottom: var(--size-400);
+    }
+
+    .right table {
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .left div {
+        width: 70%;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .left h2 {
+        font-size: var(--fs-700);
+    }
+
+    .left div {
+        width: 100%;
+    }
 }
 
 /* **********************  map section ********************** */
